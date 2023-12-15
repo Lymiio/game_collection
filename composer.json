@@ -1,0 +1,8 @@
+{
+  "require-dev": {
+    "sami/sami": "^4.1"
+  },
+  "scripts": {
+    "generate-docs": "php vendor/bin/sami.php update config/sami.php"
+  }
+}
