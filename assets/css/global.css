@@ -1,0 +1,88 @@
+/* ============================== GLOBAL STYLE FOR THE WEBSITE ============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Barlow', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #211F2A;
+    color: white;
+}
+
+/* ============================== GLOBAL STYLE FOR THE NAVBAR ============================== */
+
+nav {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #211F2A;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+}
+
+nav img {
+    width: 75px;
+    height: 75px;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav .right-items li {
+    list-style: none;
+    margin-left: 1.5rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+nav ul li a:hover {
+    color: #FFD600;
+}
+
+nav .right-items {
+    display: flex;
+    align-items: flex-end;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+nav .left-items {
+    display: flex;
+    align-items: flex-start;
+}
+
+/* ============================== GLOBAL STYLE FOR THE FOOTER ============================== */
+
+footer {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #211F2A;
+}
+
+footer p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19.2px;
+}
