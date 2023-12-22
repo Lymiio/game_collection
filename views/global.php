@@ -28,7 +28,7 @@
     </main>
 
     <footer>
-        <p>Game Collection &copy; 2023</p>
+        <p>Game Collection &copy; 2023 - Tous Droits Réservés</p>
     </footer>
     
 </body>
