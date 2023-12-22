@@ -9,21 +9,26 @@
 <body>
 
     <header>
-        <img src="../assets/img/" alt="Logo du site">
         <nav>
+            <ul class="left-items">
+                <li><a href="global.php"><img src="../assets/img/logo.png" alt="Logo du site"></a></li>
+            </ul>
             <ul class="right-items">
-                <li><a href="index.php">Home</a></li>
-                <li><a href="games.php">Games</a></li>
+                <li><a href="games.php">Ma bibliothèque</a></li>
+                <li><a href="games.php">Ajouter un jeu</a></li>
+                <li><a href="leaderbord.php">Classement</a></li>
+                <li><a href="login.php">Se connecter</a></li>
+                <li><a href="register.php">S'inscrire</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <?= $content ?>
+        <!-- TODO: Ajouter le contenu de la page-->
     </main>
 
     <footer>
-        <p>Game Collection &copy; 2020</p>
+        <p>Game Collection &copy; 2023</p>
     </footer>
     
 </body>
