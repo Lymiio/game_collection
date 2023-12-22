@@ -22,8 +22,8 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
-    background-color: #1A1926;
+    padding: 1rem;
+    background-color: #211F2A;
 }
 
 nav ul {
@@ -31,9 +31,18 @@ nav ul {
     align-items: center;
 }
 
+nav img {
+    width: 75px;
+    height: 75px;
+}
+
 nav ul li {
     list-style: none;
-    margin-left: 2rem;
+}
+
+nav .right-items li {
+    list-style: none;
+    margin-left: 1.5rem;
 }
 
 nav ul li a {
@@ -50,10 +59,15 @@ nav ul li a:hover {
 
 nav .right-items {
     display: flex;
-    align-items: end;
+    align-items: flex-end;
     font-weight: 600;
     font-size: 20px;
     line-height: 24px;
+}
+
+nav .left-items {
+    display: flex;
+    align-items: flex-start;
 }
 
 /* ============================== GLOBAL STYLE FOR THE FOOTER ============================== */
