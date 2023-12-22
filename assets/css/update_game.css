@@ -1,0 +1,135 @@
+/* ============================== GLOBAL STYLE FOR THE MAIN CONTENT ============================== */
+
+main {
+  display: flex;
+  align-self: center;
+  width: 90%;
+  margin-top: 30px;
+  margin-left: 5%;
+  margin-bottom: 60px;
+  justify-content: space-between;
+  gap: 35%;
+}
+
+.left {
+  display: flex;
+  align-self: flex-start;
+  height: auto;
+}
+
+.left .container {
+  width: 100%;
+}
+
+.right {
+  display: flex;
+  align-self: flex-end;
+  width: 49%;
+  height: auto;
+  margin-top: 5px;
+}
+
+.description {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.time {
+  margin-bottom: 20px;
+}
+
+.heading2 {
+  margin-bottom: 10px;
+}
+
+/* ============================== GLOBAL STYLE FOR THE FORM INPUT ============================== */
+
+#time-passed-game {
+  width: 47%;
+  height: 35px;
+  border-radius: 10px;
+  border: 1px solid #17151d;
+  padding-left: 10px;
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  background-color: #17151d;
+  color: white;
+}
+
+#time-passed-game:focus {
+  outline-color: #6757d6;
+}
+
+/* ============================== STYLE FOR THE LABEL ============================== */
+.label-time {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+/* ============================== REMOVING ARROWS OF THE INPUT ============================== */
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+/* Chrome */
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Opéra*/
+input::-o-inner-spin-button,
+input::-o-outer-spin-button {
+  -o-appearance: none;
+  margin: 0;
+}
+
+/* ============================== GLOBAL STYLE FOR THE ADD-TIME BUTTON ============================== */
+
+.modify-btn {
+  width: 20%;
+  height: 35px;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: #6757d6;
+  border-color: #6757d6;
+  color: white;
+  font-weight: 400;
+  font-size: 19px;
+  outline: none;
+  transition: ease-in-out 0.5s;
+}
+
+.modify-btn:hover {
+  background-color: #453997;
+}
+
+/* ============================== GLOBAL STYLE FOR THE REMOVE BUTTON ============================== */
+
+.remove-btn {
+  width: 25%;
+  height: 35px;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: #6757d6;
+  border-color: #6757d6;
+  color: white;
+  font-weight: 400;
+  font-size: 19px;
+  outline: none;
+  transition: ease-in-out 0.5s;
+}
+
+.remove-btn:hover {
+  background-color: #453997;
+}
+
+/* ============================== ADDING STYLE TO THE FOOTER ============================== */
+footer {
+  top: 95%;
+}
