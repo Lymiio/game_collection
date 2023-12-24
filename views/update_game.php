@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
-
+<?php include('../controllers/bdd.php');?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -68,6 +68,16 @@
         </div>
 
     </main>
+
+    <?php
+        $requete = "SELECT * FROM JEU";
+        $resultat = mysqli_query($connexion, $requete);
+        
+        // Traiter les résultats
+        while ($ligne = mysqli_fetch_assoc($resultat)) {
+            echo "Nom: " . $ligne['nom_jeu'] . "<br>";
+        }
+    ?>
 
     <footer>
         <p>Game Collection &copy; 2023 - Tous Droits Réservés</p>
