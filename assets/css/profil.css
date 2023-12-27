@@ -1,0 +1,71 @@
+/* ============================== GLOBAL STYLE FOR THE MAIN ============================== */
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 80vh;
+}
+
+/* ============================== GLOBAL STYLE FOR THE CONTAINER ============================== */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+/* ============================== GLOBAL STYLE FOR THE HEADING ============================== */
+.heading1 {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  width: 100%;
+  margin-bottom: 0.5%;
+}
+
+/* ============================== GLOBAL STYLE FOR THE FORM ============================== */
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+/* ============================== GLOBAL STYLE FOR LABELS ============================== */
+label {
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 0.5rem;
+}
+
+/* ============================== GLOBAL STYLE FOR INPUTS ============================== */
+input {
+  width: 30%;
+  height: 5vh;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: #2b2f40;
+}
+
+/* ============================== GLOBAL STYLE FOR SUBMIT INPUTS ============================== */
+input[type="submit"] {
+  margin-top: 1%;
+  width: 15%;
+  height: 5vh;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: #6757d6;
+  color: #fff;
+  cursor: pointer;
+  transition: 1s ease-in-out;
+}
+
+input[type="submit"]:hover {
+  background-color: #4e3fb4;
+}
