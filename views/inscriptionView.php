@@ -1,51 +1,29 @@
 <!DOCTYPE html>
-<html lang="fr">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/css/global.css">
-    <link rel="stylesheet" href="../assets/css/inscription.css">
     <title>Inscription</title>
 </head>
-
 <body>
+    <h2>Inscription</h2>
+    <form action="../controllers/inscriptionController.php" method="post">
+        <label for="nom">Nom :</label>
+        <input type="text" name="nom" required><br>
 
-    <main>
+        <label for="prenom">Prénom :</label>
+        <input type="text" name="prenom" required><br>
 
-        <div class="container">
+        <label for="email">Email :</label>
+        <input type="email" name="email" required><br>
 
-            <h1 class="heading1">
-                Inscription
-            </h1>
+        <label for="mot_de_passe">Mot de passe :</label>
+        <input type="password" name="mot_de_passe" required><br>
 
-            <form action="">
+        <label for="confirmation_mot_de_passe">Confirmer le mot de passe :</label>
+        <input type="password" name="confirmation_mot_de_passe" required><br>
 
-                <label for="name">Nom :</label>
-                <input type="text" require>
-                <label for="firstname">Prénom :</label>
-                <input type="text" require>
-                <label for="email">Email :</label>
-                <input type="email" require>
-                <label for="password">Mot de passe :</label>
-                <input type="password" name="password" id="password" require>
-                <label for="password">Confirmer le mot de passe :</label>
-                <input type="password" name="password" id="password" require>
-
-                <button type="button">S'inscrire</button>
-
-            </form>
-
-            <a href="connexionView.php">Se connecter</a>
-
-        </div>
-
-    </main>
-
-    <footer>
-        <p>Game Collection &copy; 2023 - Tous Droits Réservés</p>
-    </footer>
-
+        <input type="submit" value="S'inscrire">
+    </form>
 </body>
-
 </html>
