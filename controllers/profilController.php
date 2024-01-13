@@ -1,9 +1,12 @@
 <?php
 session_start();
 
-// Vérifier si l'utilisateur est connecté
-if (!isset($_SESSION['user_id'])) {
-    // Redirection vers la page de connexion si l'utilisateur n'est pas connecté
+// Vérifier si le formulaire de déconnexion a été soumis
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['logout'])) {
+    // Détruire la session en cours (déconnexion)
+    session_destroy();
+
+    // Redirection vers la page de connexion
     header('Location: ../views/connexionView.php');
     exit();
 }
