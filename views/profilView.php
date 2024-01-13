@@ -7,6 +7,8 @@
     <title>Game Collection | Home</title>
     <link rel="stylesheet" href="../assets/css/global.css">
     <link rel="stylesheet" href="../assets/css/profil.css">
+    <link rel="shortcut icon" href="../assets/img/logo.png" type="image/x-icon">
+    <title>Game Collection | Profil</title>
 </head>
 
 <body>
@@ -32,12 +34,10 @@
             </h1>
 
             <?php
-            // Inclusion du fichier de contrôleur
             include('../controllers/profilController.php');
             ?>
 
             <form action="" method="POST">
-                <!-- Préremplissage des champs du formulaire avec les données de l'utilisateur -->
                 <label for="name">Nom :</label>
                 <input type="text" name="name" id="name" placeholder="Nom" value="<?php echo $user['nom_utilisateur']; ?>">
 
@@ -50,8 +50,8 @@
                 <label for="password">Mot de passe :</label>
                 <input type="password" name="password" id="password" placeholder="Mot de passe">
 
-                <label for="password2">Confirmer le mot de passe :</label>
-                <input type="password" name="password2" id="password2" placeholder="Confirmer le mot de passe">
+                <label for="confirm__password">Confirmer le mot de passe :</label>
+                <input type="password" name="confirm__password" id="confirm__password" placeholder="Confirmer le mot de passe">
 
                 <input type="submit" name="modify" id="modify" value="Modifier">
                 <input type="submit" name="delete" id="delete" value="Supprimer mon compte">
