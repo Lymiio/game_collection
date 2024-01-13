@@ -22,9 +22,9 @@
                 <label for="email">Email :</label>
                 <input type="email" name="email" id="email">
                 <label for="password">Mot de passe :</label>
-                <input type="password" name="mdp" id="mdp">
+                <input type="password" name="mdp" id="password">
                 <label for="confirm__password">Confirmation du mot de passe :</label>
-                <input type="password" name="mdp2" id="mdp2">
+                <input type="password" name="mdp2" id="confirm__password">
                 <input type="submit" value="S'inscrire">
             </form>
         </div>
