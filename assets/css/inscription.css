@@ -10,7 +10,7 @@ main {
 /* ============================== GLOBAL STYLE FOR THE CONTAINER ============================== */
 .container {
   width: 40%;
-  height: 80%;
+  height: 95%;
   display: flex;
   flex-direction: column;
   border-radius: 30px;
@@ -23,7 +23,7 @@ main {
   align-self: flex-start;
   margin-left: 10%;
   font-weight: 700;
-  margin-top: 7%;
+  margin-top: 4%;
   margin-bottom: 2%;
 }
 
@@ -54,7 +54,7 @@ input:focus {
 }
 
 /* ============================== GLOBAL STYLE FOR THE BUTTON ============================== */
-button {
+input[type="submit"] {
   border: none;
   text-align: center;
   width: 20%;
@@ -67,10 +67,11 @@ button {
   background-color: #6757d6;
   color: white;
   cursor: pointer;
+  padding-left: 2.3%;
   transition: 0.5s ease-in-out;
 }
 
-button:hover {
+input[type="submit"]:hover {
   background-color: #4e3fb4;
 }
 
