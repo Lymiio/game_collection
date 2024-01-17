@@ -50,6 +50,7 @@
                     <div class="cover">
                         <img src="../assets/img/zelda.png" alt="Cover du jeu">
                     </div>
+                    <div class="overlay"></div>
                     <div class="content-container">
                         <div class="content">
                             <h3 class="heading3">The Legend of Zelda : Breath of the Wild</h3>
@@ -65,16 +66,19 @@
                     <div class="cover">
                         <img src="../assets/img/reddead.png" alt="Cover du jeu">
                     </div>
+                    <div class="overlay"></div>
                 </div>
                 <div class="game">
                     <div class="cover">
                         <img src="../assets/img/reddead2.png" alt="Cover du jeu">
                     </div>
+                    <div class="overlay"></div>
                 </div>
                 <div class="game">
                     <div class="cover">
                         <img src="../assets/img/gta.png" alt="Cover du jeu">
                     </div>
+                    <div class="overlay"></div>
                 </div>
 
             </div>

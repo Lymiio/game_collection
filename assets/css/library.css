@@ -123,11 +123,14 @@ input[type=submit]:hover {
 
 /* ============================== GLOBAL STYLE FOR THE CONTENT ============================== */
 .content {
+    margin-top: 20px;
+    position: relative;
     padding: 10px;
     color: white;
     flex: 1; /* Le contenu prend autant d'espace disponible que possible */
     display: flex;
     flex-direction: column;
+    z-index: 200;
 }
 
 /* ============================== GLOBAL STYLE FOR THE BUTTON ============================== */
@@ -147,4 +150,14 @@ input[type=submit]:hover {
 
 .button:hover {
     background-color: #4e3fb4;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 97.7%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.733) 50%, rgba(0, 0, 0, 0)70%);
+    margin-bottom: 5px;
 }
