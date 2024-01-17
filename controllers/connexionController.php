@@ -28,6 +28,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
         if ($user && password_verify($_POST['password'], $user['mot_de_passe_utilisateur'])) {
             // Authentification réussie
             $_SESSION['user_id'] = $user['id_utilisateur'];
+            $_SESSION['user_name']= $user['prenom_utilisateur'];
 
             // Redirection vers la page suivante (par exemple, dashboard.php)
             header('Location: ../views/homepageView.php');
