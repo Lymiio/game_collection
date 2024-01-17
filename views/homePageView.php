@@ -18,7 +18,7 @@
                 <li><a href="homePageView.php"><img src="../assets/img/logo.png" alt="Logo du site"></a></li>
             </ul>
             <ul class="right-items">
-                <li><a href="libraryControllers.php">Ma bibliothèque</a></li>
+                <li><a href="libraryView.php">Ma bibliothèque</a></li>
                 <li><a href="addGameFormView.php">Ajouter un jeu</a></li>
                 <li><a href="leaderbord.php">Classement</a></li>
                 <li><a href="profilView.php">Profil</a></li>
@@ -46,7 +46,7 @@
                     <div class="game">
                         <div class="cover">
                             <img src="<?php echo $game['couverture_jeu']; ?>" alt="Cover du jeu">
-                        </div>
+                            </div>
                         <div class="overlay"></div>
                         <div class="content-container">
                             <div class="content">
@@ -69,4 +69,4 @@
 
 </body>
 
-</html>
+</html>                

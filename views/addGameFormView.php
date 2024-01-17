@@ -14,12 +14,13 @@
     <header>
         <nav>
             <ul class="left-items">
-                <li><a href="global.php"><img src="../assets/img/logo.png" alt="Logo du site"></a></li>
+                <li><a href="homePageView.php"><img src="../assets/img/logo.png" alt="Logo du site"></a></li>
             </ul>
             <ul class="right-items">
-                <li><a href="games.php">Ma bibliothèque</a></li>
-                <li><a href="games.php">Ajouter un jeu</a></li>
-                <li><a href="leaderbord.php">Classement</a></li>
+                <li><a href="libraryView.php">Ma bibliothèque</a></li>
+                <li><a href="addGameFormView.php">Ajouter un jeu</a></li>
+                <li><a href="leaderboardView.php">Classement</a></li>
+                <li><a href="profilView.php">Profil</a></li>
             </ul>
         </nav>
     </header>

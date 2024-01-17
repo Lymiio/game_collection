@@ -15,11 +15,11 @@
     <header>
         <nav>
             <ul class="left-items">
-                <li><a href="global.php"><img src="../assets/img/logo.png" alt="Logo du site"></a></li>
+                <li><a href="homePageView.php"><img src="../assets/img/logo.png" alt="Logo du site"></a></li>
             </ul>
             <ul class="right-items">
-                <li><a href="games.php">Ma bibliothèque</a></li>
-                <li><a href="games.php">Ajouter un jeu</a></li>
+                <li><a href="libraryView.php">Ma bibliothèque</a></li>
+                <li><a href="addGameFormView.php">Ajouter un jeu</a></li>
                 <li><a href="leaderboardView.php">Classement</a></li>
                 <li><a href="profilView.php">Profil</a></li>
             </ul>
@@ -36,9 +36,9 @@
                 <tbody>
                     <tr class="title">
                         <td>Joueur</td>
-                        <td>Jeu</td>
+<td>Jeu</td>
                         <td>Temps passé</td>
-                    </tr>
+                                            </tr>
                     <?php 
                         require("../controllers/leaderboardController.php");
                         if (!isset($leaderboard)) {
@@ -46,11 +46,11 @@
                         } else {
                             foreach ($leaderboard as $entry){ ?>
                             <tr>
-                                <td><?php echo($entry['nom_utilisateur']);?></td>
-                                <td><?php echo $entry['nom_jeu'] ?></td>
-                                <td><?php echo $entry['temps_de_jeu_bibliotheque'] ?> heures</td>
-                            </tr>
-                        <?php
+                        <td><?php echo($entry['nom_utilisateur']);?></td>
+                        <td><?php echo $entry['nom_jeu'] ?></td>
+                        <td><?php echo $entry['temps_de_jeu_bibliotheque'] ?> heures</td>
+                    </tr>
+<?php
                             }
                         } 
                     ?>

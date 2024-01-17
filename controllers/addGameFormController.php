@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     '$description', '$url_cover', '$url_website')";
 
     if (mysqli_query($connexion, $insertQuery)) {
-        header('Location: ../views/bibliotèqueView.php');
+        header('Location: ../views/libraryView.php');
     } else {
         echo "Erreur lors de l'ajout du jeu : " . mysqli_error($connexion);
     }
