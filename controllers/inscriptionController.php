@@ -1,54 +1,55 @@
 <?php
-// Connection to database
+// Connexion à la base de données (à remplacer par vos informations)
 $host = 'localhost';
 $dbname = 'game_collection';
 $user = 'root';
 $password = '';
 
-$conn = mysqli_connect($host, $user, $password, $dbname);
+$connexion = mysqli_connect($host, $user, $password, $dbname);
 
-// Verify connection
-if (!$conn) {
+// Vérifier la connexion
+if (!$connexion) {
     die("La connexion à la base de données a échoué : " . mysqli_connect_error());
 }
 
-// Get data from form
+// Récupérer les données du formulaire
 $nom = $_POST['nom'];
 $prenom = $_POST['prenom'];
 $email = $_POST['email'];
-$password = $_POST['password'];
-$confirm__password = $_POST['confirm__password'];
+$mot_de_passe = $_POST['mot_de_passe'];
+$confirmation_mot_de_passe = $_POST['confirmation_mot_de_passe'];
 
-// Verify corresponding passwords
-if ($password !== $confirm__password) {
+// Vérifier si les mots de passe correspondent
+if ($mot_de_passe !== $confirmation_mot_de_passe) {
     echo "Erreur : Les mots de passe ne correspondent pas.";
 } else {
-    try {
-        // Hash password
-        $hash__password = password_hash($password, PASSWORD_DEFAULT);
+    try{
+        // Hachage du mot de passe
+        $mot_de_passe_hache = password_hash($mot_de_passe, PASSWORD_DEFAULT);
 
-        // Prepare request
-        $query = "SELECT * FROM UTILISATEUR WHERE email_utilisateur='$email'";
-        $result__query = mysqli_query($conn, $query);
+        // Vérifier si l'email existe déjà dans la base de données
+        $verification_requete = "SELECT * FROM UTILISATEUR WHERE email_utilisateur='$email'";
+        $resultat_verification = mysqli_query($connexion, $verification_requete);
 
-        // Check if email already exists
-        if (mysqli_num_rows($result__query) > 0) {
+        if (mysqli_num_rows($resultat_verification) > 0) {
+            // L'email existe déjà, renvoyer une erreur ou rediriger vers une page d'erreur
             echo "Erreur : Cet email est déjà enregistré.";
         } else {
-            // Email doesn't exist, insert data into database
-            $insert__query = "INSERT INTO UTILISATEUR (nom_utilisateur, prenom_utilisateur, email_utilisateur, password_utilisateur) VALUES ('$nom', '$prenom', '$email', '$hash__password')";
+            // L'email n'existe pas, procéder à l'inscription
+            $requete = "INSERT INTO UTILISATEUR (nom_utilisateur, prenom_utilisateur, email_utilisateur, mot_de_passe_utilisateur) VALUES ('$nom', '$prenom', '$email', '$mot_de_passe_hache')";
 
-            if (mysqli_query($conn, $insert__query)) {
+            if (mysqli_query($connexion, $requete)) {
                 header('Location: ../views/connexionView.php');
-                exit();
+                exit(); // Assurez-vous d'ajouter exit() après la redirection
             } else {
-                echo "Erreur lors de l'inscription : " . mysqli_error($conn);
+                echo "Erreur lors de l'inscription : " . mysqli_error($connexion);
             }
         }
     } catch (PDOException $e) {
-        die($e->getMessage());
+        die($e -> getMessage());
     }
 }
 
-// Close connection
+// Fermer la connexion
 mysqli_close($connexion);
+?>

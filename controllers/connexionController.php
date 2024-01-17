@@ -1,43 +1,46 @@
 <?php
 session_start();
 
-// Verification of the form submission
+// Vérification si le formulaire a été soumis
 if (isset($_POST['email']) && isset($_POST['password'])) {
-    // Connection to database
+    // Connexion à la base de données
     $host = 'localhost';
     $dbname = 'game_collection';
     $user = 'root';
     $password = '';
 
-    $conn = mysqli_connect($host, $user, $password, $dbname);
+    $connexion = mysqli_connect($host, $user, $password, $dbname);
 
-    // Verify connection
-    if (!$conn) {
+    // Vérifier la connexion
+    if (!$connexion) {
         die("La connexion à la base de données a échoué : " . mysqli_connect_error());
     }
 
-    // Prepare the query
-    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    // Préparation de la requête SQL pour vérifier les informations d'identification
+    $email = mysqli_real_escape_string($connexion, $_POST['email']);
     $query = "SELECT * FROM UTILISATEUR WHERE email_utilisateur = '$email'";
-    $result = mysqli_query($conn, $query);
+    $result = mysqli_query($connexion, $query);
 
     if ($result) {
         $user = mysqli_fetch_assoc($result);
 
-        // Verify password
+        // Vérification du mot de passe
         if ($user && password_verify($_POST['password'], $user['mot_de_passe_utilisateur'])) {
+            // Authentification réussie
             $_SESSION['user_id'] = $user['id_utilisateur'];
 
-            // Redirection to main page
-            header('Location: ../views/homeView.php');
+            // Redirection vers la page suivante (par exemple, dashboard.php)
+            header('Location: ../views/homepageView.php');
             exit();
         } else {
+            // Authentification échouée
             echo 'Identifiants incorrects';
         }
     } else {
-        echo "Erreur lors de la requête : " . mysqli_error($conn);
+        echo "Erreur lors de la requête : " . mysqli_error($connexion);
     }
 
-    // Close connection
-    mysqli_close($conn);
+    // Fermer la connexion
+    mysqli_close($connexion);
 }
+?>
