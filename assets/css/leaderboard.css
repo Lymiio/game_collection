@@ -1,0 +1,50 @@
+/* ============================== GLOBAL STYLE FOR THE MAIN ============================== */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  width: 100%;
+}
+
+/* ============================== GLOBAL STYLE FOR THE CONTAINER ============================== */
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: 100%;
+}
+
+/* ============================== GLOBAL STYLE FOR THE HEADING ============================== */
+.heading1 {
+  margin-top: 1vw;
+  flex-direction: column;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+/* ============================== GLOBAL STYLE FOR THE TABLE ============================== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+/* ============================== GLOBAL STYLE FOR THE TABLE TITLE ============================== */
+.title {
+  font-weight: 700;
+}
+
+/* ============================== GLOBAL STYLE FOR THE TABLE LINES ============================== */
+td {
+  border-style: none;
+  padding: 8px;
+  text-align: left;
+}
+
+/* ============================== GLOBAL STYLE FOR THE COLOR INVERSION ============================== */
+tr:nth-child(even) td {
+  background-color: #252836;
+}
