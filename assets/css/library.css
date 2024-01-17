@@ -92,9 +92,14 @@ input[type=submit]:hover {
     overflow: hidden;
 }
 
+.img{
+    width: 400px;
+    height: 300px;
+}
+
 .cover img {
-    width: 100%;
-    height: 100%;
+    width: 300px;
+    height: 300px;
     object-fit: cover; /* Ajustez le comportement de l'objet en fonction de vos besoins */
 }
 
@@ -123,7 +128,7 @@ input[type=submit]:hover {
 
 /* ============================== GLOBAL STYLE FOR THE CONTENT ============================== */
 .content {
-    margin-top: 20px;
+    margin-top: 50px;
     position: relative;
     padding: 10px;
     color: white;
@@ -135,7 +140,7 @@ input[type=submit]:hover {
 
 /* ============================== GLOBAL STYLE FOR THE BUTTON ============================== */
 .buttons {
-    margin-top: 30px; /* Le bouton se positionne en bas de la .content */
+    margin-top: 20px; /* Le bouton se positionne en bas de la .content */
 }
 
 .button {
@@ -157,7 +162,7 @@ input[type=submit]:hover {
     top: 0;
     left: 0;
     width: 100%;
-    height: 97.7%;
+    height: 98%;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.733) 50%, rgba(0, 0, 0, 0)70%);
     margin-bottom: 5px;
 }

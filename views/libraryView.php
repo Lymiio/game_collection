@@ -34,53 +34,37 @@
                 Ajouter un jeu
             </h1>
 
-            <form action="">
+            <form action="libraryView.php" method="POST">
                 <label for="game">Nom du jeu :</label>
-                <input type="text" id="game" placeholder="Nom du jeu">
+                <input type="text" id="game" name="search" placeholder="Nom du jeu">
                 <input type="submit" value="Rechercher">
             </form>
+
 
             <h2 class="heading2">
                 Mes jeux
             </h2>
 
             <div class="games">
-
-                <div class="game">
-                    <div class="cover">
-                        <img src="../assets/img/zelda.png" alt="Cover du jeu">
-                    </div>
-                    <div class="overlay"></div>
-                    <div class="content-container">
-                        <div class="content">
-                            <h3 class="heading3">The Legend of Zelda : Breath of the Wild</h3>
-                            <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-                            <div class="buttons">
-                                <a href="#" class="button">Ajouter à la bibliothèque</a>
+                <?php 
+                    require_once('../controllers/libraryController.php');
+                    foreach ($games as $game){ ?>
+                    <div class="game">
+                        <div class="cover">
+                            <img src="<?php echo $game['couverture_jeu']; ?>" alt="Cover du jeu">
+                        </div>
+                        <div class="overlay"></div>
+                        <div class="content-container">
+                            <div class="content">
+                                <h3 class="heading3"><?php echo $game['nom_jeu']; ?></h3>
+                                <p class="description"><?php echo $game['plateforme_jeu']; ?></p>
+                                <div class="buttons">
+                                    <a href="#" class="button">Ajouter à la bibliothèque</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="game">
-                    <div class="cover">
-                        <img src="../assets/img/reddead.png" alt="Cover du jeu">
-                    </div>
-                    <div class="overlay"></div>
-                </div>
-                <div class="game">
-                    <div class="cover">
-                        <img src="../assets/img/reddead2.png" alt="Cover du jeu">
-                    </div>
-                    <div class="overlay"></div>
-                </div>
-                <div class="game">
-                    <div class="cover">
-                        <img src="../assets/img/gta.png" alt="Cover du jeu">
-                    </div>
-                    <div class="overlay"></div>
-                </div>
-
+                <?php } ?>
             </div>
 
         </div>
